@@ -1,0 +1,133 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #ffffff #d6d6d6;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #d6d6d60e;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff60;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container{
+	padding: 0 50px;
+}
+
+body {
+  font-family: $mainFontFamily;
+  background-image: url(../img/main_bg_3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  max-width: 1660px;
+  padding: 80px 100px;
+  margin: 0 auto;
+
+  .header {
+    width: 25%;
+    height: 100%;
+    background-color: $headerBgColor;
+    padding: 40px;
+    text-align: center;
+    overflow: auto;
+
+    .photo {
+      height: 125px;
+      max-width: 125px;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto 30px auto;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+        width: 100%;
+        background-color: $headerPhotoBorderColor;
+        opacity: 0.3;
+        inset: 0 auto auto 50%;
+        translate: -50% 0;
+        margin: 3px auto auto 3px;
+        z-index: -1;
+        aspect-ratio: 1;
+        max-width: 125px;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 100%;
+        display: block;
+        border: 2px solid $headerPhotoBorderColor;
+      }
+    }
+    .name {
+      color: $headerDefaultTextColor;
+      @include fluid-type(320px, 1320px, 22px, 30px);
+      margin: 0 0 7px 0;
+    }
+    .position {
+      color: $headerDefaultTextColor;
+      font-size: 16px;
+      font-weight: 300;
+      margin: 0 0 7px 0;
+    }
+    .social-icons {
+      background-color: $headerIconsBGColor;
+      border-radius: 25px;
+      padding: 6px 15px;
+      display: inline-flex;
+      justify-content: space-around;
+      gap: 20px;
+      a {
+        color: $headerDefaultTextColor;
+      }
+    }
+    .phone {
+      a {
+        color: $headerDefaultTextColor;
+      }
+    }
+    .mail {
+      a {
+        color: $headerDefaultTextColor;
+      }
+    }
+  }
+
+  .content {
+    width: 75%;
+    height: 100%;
+    position: relative;
+
+    .section {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $defaultSectionBGColor;
+      overflow: auto;
+    }
+  }
+}
