@@ -476,3 +476,37 @@ body {
   font-size: 36px;
   margin: 0;
 }
+
+.design-skills .skill {
+  margin: 0 0 15px 0;
+}
+.design-skills .skill .skill-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 10px 0;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.design-skills .skill .skill-top .name {
+  color: #000;
+  font-size: 14px;
+}
+.design-skills .skill .skill-top .percent {
+  color: #9baab3;
+  font-size: 14px;
+}
+.design-skills .skill .skill-bottom .progress {
+  border-radius: 4px;
+  background-color: #ebeef2;
+  height: 6px;
+}
+.design-skills .skill .skill-bottom .progress .bar {
+  display: block;
+  border-radius: 4px;
+  background-color: #56b887;
+  height: 100%;
+}
